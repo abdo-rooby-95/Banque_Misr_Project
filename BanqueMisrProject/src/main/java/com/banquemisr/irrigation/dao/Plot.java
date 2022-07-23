@@ -1,4 +1,4 @@
-package dao;
+package com.banquemisr.irrigation.dao;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

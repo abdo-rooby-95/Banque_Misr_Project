@@ -1,4 +1,4 @@
-package controller;
+package com.banquemisr.irrigation.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import dao.Plot;
-import service.PlotServiceImp;
+import com.banquemisr.irrigation.dao.Plot;
+import com.banquemisr.irrigation.service.PlotServiceImp;
 
 @RestController
 public class PlotController {

@@ -1,9 +1,9 @@
-package repository;
+package com.banquemisr.irrigation.repository;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import dao.Plot;
+import com.banquemisr.irrigation.dao.Plot;
 
 @Repository
 public interface PlotRepository extends CrudRepository<Plot, Long> {

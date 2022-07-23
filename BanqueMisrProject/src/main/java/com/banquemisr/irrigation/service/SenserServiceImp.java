@@ -1,13 +1,13 @@
-package service;
+package com.banquemisr.irrigation.service;
 
 import java.util.Date;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import dao.Plot;
-import dao.PlotConfiguration;
-import dao.Sensor;
+import com.banquemisr.irrigation.dao.Plot;
+import com.banquemisr.irrigation.dao.PlotConfiguration;
+import com.banquemisr.irrigation.dao.Sensor;
 
 public class SenserServiceImp implements SensorService{
 

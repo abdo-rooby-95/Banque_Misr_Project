@@ -1,8 +1,8 @@
-package service;
+package com.banquemisr.irrigation.service;
 
 import java.util.Date;
 
-import dao.Sensor;
+import com.banquemisr.irrigation.dao.Sensor;
 
 public interface SensorService {
 

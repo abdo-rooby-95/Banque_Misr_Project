@@ -1,11 +1,13 @@
 package dao;
 
-public class Address {
+import javax.persistence.Embeddable;
 
+@Embeddable
+public class Address {
 private String street;
 private String zipCode;
 private String country;
-
+  
 public String getStreet() {
 	return street;
 }

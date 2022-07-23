@@ -1,16 +1,24 @@
 package dao;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.ManyToOne;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;
 
+@Entity
 @Table(name = "Plot")
 public class Plot {
 
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	private Double size;
 	private String type;
 	private Address location;
+	@ManyToOne
 	private PlotConfiguration configuration;
 
 	public Plot() {

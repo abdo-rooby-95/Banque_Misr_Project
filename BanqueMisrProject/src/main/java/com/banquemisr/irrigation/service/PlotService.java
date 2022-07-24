@@ -2,7 +2,6 @@ package com.banquemisr.irrigation.service;
 
 import java.util.List;
 import java.util.Optional;
-
 import com.banquemisr.irrigation.dao.Plot;
 import com.banquemisr.irrigation.dao.PlotConfiguration;
 

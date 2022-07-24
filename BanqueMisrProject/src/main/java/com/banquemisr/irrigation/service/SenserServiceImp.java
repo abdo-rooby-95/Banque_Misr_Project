@@ -1,9 +1,6 @@
 package com.banquemisr.irrigation.service;
 
-import java.util.Date;
-
 import org.springframework.beans.factory.annotation.Autowired;
-
 import com.banquemisr.irrigation.dao.Plot;
 import com.banquemisr.irrigation.dao.PlotConfiguration;
 import com.banquemisr.irrigation.dao.Sensor;

@@ -9,43 +9,45 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.banquemisr.irrigation.dao.Plot;
 import com.banquemisr.irrigation.service.PlotServiceImp;
 
 @RestController
+@RequestMapping(path = "irrigation/plot")
 public class PlotController {
 	@Autowired
 	private PlotServiceImp plotService;
 	
 	
-	@PostMapping("/plot/add")
+	@PostMapping("/add")
 	public void addPlot(@RequestBody Plot plot) {
 		plotService.addPolt(plot);
 	}
 	
-	@PostMapping("/plot/edit")
+	@PostMapping("/edit")
 	public void editPlot(@RequestBody Plot plot) {
 		plotService.addPolt(plot);
 	}
 	
-	@PostMapping("/plot/configure")
+	@PostMapping("/configure")
 	public void configurePlot(@RequestBody Plot plot) {
 		plotService.addPolt(plot);
 	}
 	
-	@GetMapping("/plot/getAll")
+	@GetMapping("/getAll")
 	public List<Plot> getAllPlots() {
 		return plotService.getAllPolt();
 	}
 	
-	@GetMapping("/plot/get/{id}")
+	@GetMapping("/get/{id}")
 	public Optional<Plot> getPlotByID(@PathVariable("id") long id) {
 		return plotService.getPoltById(id);
 	}
 	
-	@DeleteMapping("/plot/delete/{id}")
+	@DeleteMapping("/delete/{id}")
 	public void deletePlotByID(@PathVariable("id") long id) {
 		plotService.deletPoltById(id);
 	}

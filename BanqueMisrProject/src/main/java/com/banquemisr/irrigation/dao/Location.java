@@ -3,7 +3,7 @@ package com.banquemisr.irrigation.dao;
 import javax.persistence.Embeddable;
 
 @Embeddable
-public class Address {
+public class Location {
 private String street;
 private String zipCode;
 private String country;
@@ -26,7 +26,7 @@ public String getCountry() {
 public void setCountry(String country) {
 	this.country = country;
 }
-public Address(String street, String zipCode, String country) {
+public Location(String street, String zipCode, String country) {
 	super();
 	this.street = street;
 	this.zipCode = zipCode;

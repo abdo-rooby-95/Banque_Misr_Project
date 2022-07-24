@@ -3,12 +3,14 @@ package com.banquemisr.irrigation.dao;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 
 @Entity
 public class PlotConfiguration {
 	
 	private Date startDate;
 	private Date endDate;
+	@OneToMany
 	private Sensor sensor;
 	private Double waterAmount;
 	

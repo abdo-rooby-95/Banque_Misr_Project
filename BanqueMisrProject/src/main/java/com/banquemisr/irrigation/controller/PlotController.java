@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.banquemisr.irrigation.dao.Plot;
+import com.banquemisr.irrigation.dao.PlotConfiguration;
 import com.banquemisr.irrigation.service.PlotServiceImp;
 
 @RestController
@@ -33,7 +34,7 @@ public class PlotController {
 	}
 	
 	@PostMapping("/configure")
-	public void configurePlot(@RequestBody Plot plot) {
+	public void configurePlot(@RequestBody Plot plot, @RequestBody PlotConfiguration configuration) {
 		plotService.addPolt(plot);
 	}
 	

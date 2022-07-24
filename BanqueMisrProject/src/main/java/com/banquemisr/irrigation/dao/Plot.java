@@ -1,5 +1,7 @@
 package com.banquemisr.irrigation.dao;
 
+import java.util.List;
+
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -21,16 +23,9 @@ public class Plot {
 	@Embedded
 	private Location location;
 	@OneToMany
-	private PlotConfiguration configuration;
+	private List<PlotConfiguration> configurationList;
 
 	public Plot() {
-	}
-
-	public Plot(Double size, String type, Location location) {
-		super();
-		this.size = size;
-		this.type = type;
-		this.location = location;
 	}
 
 	public Double getSize() {
@@ -57,19 +52,36 @@ public class Plot {
 		this.type = type;
 	}
 
-	public PlotConfiguration getConfiguration() {
-		return configuration;
+	public Long getId() {
+		return id;
 	}
 
-	public void setConfiguration(PlotConfiguration configuration) {
-		this.configuration = configuration;
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public List<PlotConfiguration> getConfigurationList() {
+		return configurationList;
+	}
+
+	public void setConfigurationList(List<PlotConfiguration> configurationList) {
+		this.configurationList = configurationList;
+	}
+
+	public Plot(Long id, Double size, String type, Location location, List<PlotConfiguration> configurationList) {
+		super();
+		this.id = id;
+		this.size = size;
+		this.type = type;
+		this.location = location;
+		this.configurationList = configurationList;
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((configuration == null) ? 0 : configuration.hashCode());
+		result = prime * result + ((configurationList == null) ? 0 : configurationList.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result + ((location == null) ? 0 : location.hashCode());
 		result = prime * result + ((size == null) ? 0 : size.hashCode());
@@ -86,10 +98,10 @@ public class Plot {
 		if (getClass() != obj.getClass())
 			return false;
 		Plot other = (Plot) obj;
-		if (configuration == null) {
-			if (other.configuration != null)
+		if (configurationList == null) {
+			if (other.configurationList != null)
 				return false;
-		} else if (!configuration.equals(other.configuration))
+		} else if (!configurationList.equals(other.configurationList))
 			return false;
 		if (id == null) {
 			if (other.id != null)
@@ -113,5 +125,5 @@ public class Plot {
 			return false;
 		return true;
 	}
-
+	
 }

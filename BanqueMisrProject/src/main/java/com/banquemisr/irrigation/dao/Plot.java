@@ -1,23 +1,25 @@
 package com.banquemisr.irrigation.dao;
 
 import java.util.List;
+
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.OneToMany;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;
 
 @Entity
 @Table(name = "Plot")
 public class Plot {
-
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	private Double size;
 	private String type;
+	private Boolean isAgricultural;
 	@Embedded
 	private Location location;
 	@OneToMany
@@ -122,6 +124,14 @@ public class Plot {
 		} else if (!type.equals(other.type))
 			return false;
 		return true;
+	}
+
+	public Boolean getIsAgricultural() {
+		return isAgricultural;
+	}
+
+	public void setIsAgricultural(Boolean isAgricultural) {
+		this.isAgricultural = isAgricultural;
 	}
 	
 }

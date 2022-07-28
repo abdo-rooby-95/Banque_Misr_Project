@@ -11,6 +11,7 @@ public interface PlotService {
 	public void deletPolt(Plot plot);
 	public Optional<Plot> getPoltById(Long id);
 	public List<Plot> getAllPolt();
-	public Boolean configurePlot(Plot plot, PlotConfiguration configuration);
+	public String irrigatePlot(Long plotId, Long Sensor);
+	public Boolean configurePlot(Long plotId, PlotConfiguration configuration);
 	
 }
